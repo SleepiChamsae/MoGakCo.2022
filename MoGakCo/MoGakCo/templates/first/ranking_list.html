@@ -1,0 +1,16 @@
+{% extends 'default.html' %}
+
+{% block title %}
+ranking list
+{% endblock %}
+
+{% block content %}
+<h1>Ranking</h1>
+<ul>
+    {% for user in object_list %}
+        <li>{{ user.user_name }} - {{ user.time }}</li>
+    {% empty %}
+        No Rank Yet
+    {% endfor %}
+</ul>
+{% endblock %}

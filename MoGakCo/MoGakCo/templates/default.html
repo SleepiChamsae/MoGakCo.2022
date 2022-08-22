@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+    {% block title %}
+    {% endblock %}
+    </title>
+    <style>
+        body { padding:0; margin: 0; }
+        #divPosition {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #horizontalCenter {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    {% block script %}
+    {% endblock %}
+</head>
+<body>
+    <div id="divPosition">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

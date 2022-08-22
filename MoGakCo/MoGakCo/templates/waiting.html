@@ -1,0 +1,26 @@
+{% extends 'default.html' %}
+
+{% block title %}
+wait until time come
+{% endblock %}
+
+{% block script %}
+{% if alert is True %}
+<script>
+    alert("It's not the time yet")
+    location.replace("http://127.0.0.1:8000/")
+</script>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<h2>
+    {{ nextTime }}
+</h2>
+
+{% if buttonVision %}
+<Button onclick="location.href='/RankingInput/'" id="horizontalCenter">
+    GOGOGO
+</Button>
+{% endif %}
+{% endblock %}
